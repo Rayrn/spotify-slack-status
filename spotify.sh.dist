@@ -9,8 +9,6 @@ PLAYBACK_STATUS_EMOJI=":metal:"
 trap onexit INT
 
 function reset() {
-    # echo 'Resetting status'
-
     curl -s \
         --data-urlencode "token=${APIKEY}" \
         --data-urlencode "profile={\"status_text\":\"${DEFAULT_STATUS}\",\"status_emoji\":\"${DEFAULT_STATUS_EMOJI}\"}" \
@@ -19,21 +17,16 @@ function reset() {
 }
 
 function onexit() {
-    # echo 'Exitting'
     reset
     exit
 }
 
 state=$(osascript -e 'tell application "Spotify" to player state')
 
-# date
-# echo "Spotify: "$state
-
 if [[ "$state" != "playing" ]]; then
     reset
 else
     SONG=$(osascript -e 'tell application "Spotify" to artist of current track & " - " & name of current track')
-    # echo $SONG
 
     curl -s \
         --data-urlencode "token=${APIKEY}" \
