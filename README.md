@@ -34,7 +34,7 @@ NB: This script is agnostic but uses the OSx plist files to set up a watch. It _
     - Check the permissions (You should see that the app can 'perform actions as you')
     - Click allow (assuming everything looked good)
 
-### Configure spotify.sh
+### Configure spotify.sh
 1. Re-save as `spotify.sh` (remove the `.dist`)
 2. Update script
     - You should now be back on the 'OAuth & Permissions' page
