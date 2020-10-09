@@ -34,7 +34,7 @@ NB: This script is agnostic but uses the OSx plist files to set up a watch. It _
     - Check the permissions (You should see that the app can 'perform actions as you')
     - Click allow (assuming everything looked good)
 
-### Configure spotify.sh
+### Configure spotify.sh.dist
 1. Re-save as `spotify.sh` (remove the `.dist`)
 2. Update script
     - You should now be back on the 'OAuth & Permissions' page
@@ -46,8 +46,8 @@ NB: This script is agnostic but uses the OSx plist files to set up a watch. It _
    - `DEFAULT_STATUS_EMOJI`: Emoji you want next to you picture when you are not listening to music (with colons)
    - `PLAYBACK_STATUS_EMOJI`: Emoji you want next to the your picture when you are listening to music (with colons)
 
-### Configure com.user.slack-spotify.plist
-1. Re-save as `com.user.slack-spotify.plist` (remove the .dist)
+### Configure com.user.slack-spotify.plist.dist
+1. Re-save as `com.user.slack-spotify.plist` (remove the `.dist`)
 2. Replace the `/path/to/checkout/` string in the included PLIST
     - It should look something like `./<checkout-folder/spotify-slack-status/spotify.sh`
     - NB: You must use an absolute path
